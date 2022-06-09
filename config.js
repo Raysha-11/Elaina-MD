@@ -28,33 +28,33 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
 /*============== SOCIAL ==============*/
 
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
-global.sig = 'https://www.instagram.com/VERDI_ZZ/'
-global.sgh = 'https://github.com/VERDIBOTZ1'
-global.sgc = 'https://chat.whatsapp.com/ED7th5Ie38eBayZEbDPxwY'
-global.sdc = 'Wa.me/6285706735450'
+global.sig = 'https://www.instagram.com/yt.agungxx'
+global.sgh = 'https://github.com/NeonBotz'
+global.sgc = ''
+global.sdc = 'Wa.me/6287719424487'
 global.snh = 'https://nhentai.net/g/365296/'
 
 /*============== PAYMENT ==============*/
-global.pdana = '6285706735450'
-global.povo = '-'
-global.pgopay = '6285706735450'
-global.ppulsa = '6285706735450'
-global.ppulsa2 = '6283869803330'
-global.psaweria = '-'
+global.pdana = 'Ndak Punya'
+global.povo = 'Ndak Punya'
+global.pgopay = 'Ndak Punya'
+global.ppulsa = '6287719424487'
+global.ppulsa2 = '628Xxxxxx Lupa'
+global.psaweria = 'Ndak Punya'
 
 /*============== NOMOR ==============*/
-global.nomorbot = '6283869803330'
-global.nomorown = '6285706735450'
-global.namebot = 'MAOU Botz'
-global.nameown = 'VERDI KAWAII'
+global.nomorbot = '6283189579654'
+global.nomorown = '6287719424487'
+global.namebot = 'Sachi Botzz え'
+global.nameown = '𝔄𝔤𝔲้ีี้𝔫𝔤𝔛้ิืีึุึึึ'
 
 
 /*============== STAFF ==============*/
 global.owner = [
-  ['6285706735450'],
-  ['6285706735450'],
-  ['6283869803330'],
-  ['6285706735450', '❦ VERDI', true]
+  ['6287719424487'],
+  ['6281368176386'],
+  ['6281368176386'],
+  ['6287719424487', '𝔄𝔤𝔲้ีี้𝔫𝔤𝔛้ิืีึุึึึ', true]
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
@@ -99,13 +99,13 @@ global.APIKeys = { // APIKey Here
 // Kata APIKEY itu isi dengan apikey lu sendiri, dengan beli ke website itu
 
 /*============== WATERMARK ==============*/
-global.wm = '                「 mασu Botz あ⁩ 」' //Main Watermark
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘мασυ Botz˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ мασυ Botz'
+global.wm = '                「 𝔖𝔞𝔠𝔥𝔦 𝔅𝔬𝔱𝔷𝔷 あ⁩ 」' //Main Watermark
+global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘𝔖𝔞𝔠𝔥𝔦 𝔅𝔬𝔱𝔷𝔷˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
+global.wm3 = '⫹⫺ 𝔖𝔞𝔠𝔥𝔦 𝔅𝔬𝔱𝔷𝔷'
 global.botdate = `⫹⫺ 𝗗𝗮𝘁𝗲: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
 global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${wktuwib}`
-global.titlebot = `⫹⫺ мασu Botz Whatsapp | By ${global.nameown}`
-global.author = '                「 мασυ Botz あ⁩ 」'
+global.titlebot = `⫹⫺ 𝔖𝔞𝔠𝔥𝔦 𝔅𝔬𝔱𝔷𝔷 Whatsapp | By ${global.nameown}`
+global.author = '                「 𝔖𝔞𝔠𝔥𝔦 𝔅𝔬𝔱𝔷𝔷 あ⁩ 」'
 
 
 /*============== LOGO ==============*/
