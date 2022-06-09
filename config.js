@@ -30,7 +30,7 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
 global.sig = 'https://www.instagram.com/yt.agungxx'
 global.sgh = 'https://github.com/Neonbotz'
-global.sgc = ''
+global.sgc = 'https://chat.whatsapp.com/GUZsmmxDNQAAMyzMKrXDTV'
 global.sdc = 'Wa.me/6287719424487'
 global.snh = 'https://nhentai.net/g/365296/'
 
