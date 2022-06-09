@@ -20,6 +20,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 	{title: "💬 | PcOnly", rowId: `${usedPrefix + command} pconly`},
 	{title: "🏢 | GcOnly", rowId: `${usedPrefix + command} gconly`},
 	{title: "📷 | SwOnly", rowId: `${usedPrefix + command} swonly`},
+        {title: "🖨️ | stiker", rowId: `${usedPrefix + command} stiker`},
 	]
     },
 ]
@@ -183,6 +184,15 @@ const listMessage = {
         throw false
       }
       global.opts['pconly'] = isEnable
+      break
+    case 'stiker':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn)
+          throw false
+        }
+      }
+      chat.stiker = isEnable
       break
     case 'gconly':
     case 'grouponly':
