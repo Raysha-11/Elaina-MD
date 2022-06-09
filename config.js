@@ -29,7 +29,7 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
 
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
 global.sig = 'https://www.instagram.com/yt.agungxx'
-global.sgh = 'https://github.com/NeonBotz'
+global.sgh = 'https://github.com/Neonbotz'
 global.sgc = ''
 global.sdc = 'Wa.me/6287719424487'
 global.snh = 'https://nhentai.net/g/365296/'
@@ -109,8 +109,8 @@ global.author = '                「 𝔖𝔞𝔠𝔥𝔦 𝔅𝔬𝔱𝔷𝔷 �
 
 
 /*============== LOGO ==============*/
-global.thumb = 'https://telegra.ph/file/d38e15166f9409c1904e7.png' //Main Thumbnail
-global.imagebot = 'https://telegra.ph/file/d38e15166f9409c1904e7.png'
+global.thumb = 'https://telegra.ph/file/3f876a993a94f0c6e4ced.jpg' //Main Thumbnail
+global.imagebot = 'https://telegra.ph/file/3f876a993a94f0c6e4ced.jpg'
 global.giflogo = 'https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg'
 global.thumbs = ['https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg', 'https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg', 'https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg','https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg']
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
