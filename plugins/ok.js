@@ -4,6 +4,6 @@ conn.sendImageAsSticker(m.chat, 'https://telegra.ph/file/f61a7c96f3f86b6c5214f.p
 }
 
 handler.customPrefix = /^(ok)$/i
-handler.command = new RegExp
+handler.command = /^(ok)$/i
 
 module.exports = handler
