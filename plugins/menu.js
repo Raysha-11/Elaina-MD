@@ -470,7 +470,7 @@ const listMessage = {
                 {
                     urlButton: {
                         displayText: `MyWeb`,
-                        url: 'https://farz-api.herokuapp.com/'
+                        url: 'https://github.com/Neonbotz'
                     }
                 },
                 {
