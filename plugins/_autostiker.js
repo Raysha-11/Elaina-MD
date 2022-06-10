@@ -1,4 +1,4 @@
-const { sticker } = require('../lib/sticker')
+import { sticker } = require('../lib/sticker')
 const WSF = require('wa-sticker-formatter')
 let handler = m => m
 
