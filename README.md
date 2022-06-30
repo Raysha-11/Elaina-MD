@@ -22,11 +22,11 @@
 > Aina whatsapp using a Baileys library.
 > Jika kamu menemukan semacam bug, harap untuk dimaklumi sementara
 >
-> • Script ini gratis, Jika ketahuan di jual, Script ini akan langsung di hapus.
+> Script ini gratis, Jika ketahuan di jual, Script ini akan langsung di hapus.
 >
-> • Pastikan Jaringan kalian lancar dan device kalian bagus:v, 
+> Pastikan Jaringan kalian lancar dan device kalian bagus:v, 
 > 
-> • Kalo pake termux mungkin bakal lama respon nya, saya sarankan pake okteto
+> Kalo pake termux mungkin bakal lama respon nya, saya sarankan pake okteto
 > 
 >
 
