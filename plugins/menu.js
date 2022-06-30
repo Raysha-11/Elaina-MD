@@ -1,53 +1,46 @@
 import { promises } from 'fs'
 import { join } from 'path'
 import { xpRange } from '../lib/levelling.js'
+import moment from 'moment-timezone'
 
 let tags = {
   'main': 'Main',
-  'rpg': 'RolePlay Games',
-  'xp': 'Exp & Limit',
-  'jadian': 'Jadian',
-  'sticker': 'Sticker',
-  'edukasi': 'Edukasi',
-  'quran': 'Al Quran',
-  'tools': 'Tools',
-  'kerang': 'Kerang Ajaib',
-  'primbon': 'Primbon',
-  'fun': 'Fun',
   'game': 'Game',
+  'rpg': 'RPG Games',
+  'xp': 'Exp & Limit',
+  'sticker': 'Sticker',
+  'kerang': 'Kerang Ajaib',
   'quotes': 'Quotes',
-  'audio': 'Audio',
-  'maker': 'Maker',
-  'downloader': 'Downloader',
-  'internet': 'Internet',
-  'random': 'Random',
-  'nsfw': 'Nsfw',
-  'nulis': 'MagerNulis & Logo',
-  'anonymous': 'Anonymous Chat',
-  'database': 'Database',
+  'fun': 'Fun',
+  'anime': 'Anime',
   'admin': 'Admin',
   'group': 'Group',
   'vote': 'Voting',
   'absen': 'Absen',
   'premium': 'Premium',
+  'anonymous': 'Anonymous Chat',
+  'internet': 'Internet',
+  'downloader': 'Downloader',
+  'tools': 'Tools',
+  'nulis': 'MagerNulis & Logo',
+  'audio': 'Audio',
+  'maker': 'Maker',
+  'database': 'Database',
+  'quran': 'Al Qur\'an',
+  'owner': 'Owner',
+  'host': 'Host',
   'advanced': 'Advanced',
   'info': 'Info',
-  'owner': 'Owner',
-  'jadibot': 'Jadi Bot',
-  'host': 'Host',
-  'Baileys': 'Baileys',
-  '': 'No Category',
 }
 const defaultMenu = {
   before: `
-ズ _*%ucapan*_
+ズ *_%ucpn_*
 
 _I'm Elaina a simple whatsapp bot multi-device made with nodejs_
 _click readmore to see feature_
 
 *About user*
 _Name : %name_
-_Age : %age_
 _Limit : %limit_
 _Level : %level_
 _Role : %role_
@@ -56,11 +49,10 @@ _User : %totalreg_
 ✇ Note : _bot ini masi dalam tahap beta, mohon bantuan nya jika ada bug/error harap lapor ke owner_
 %readmore
 `.trimStart(),
-  header: '▣═━–〈 *%category* 〉–━═▣',
-  body: `┊${emot} %cmd %islimit %isPremium`,
-  footer: '┗–––––––––––━═▣\n',
-  after: `⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ 
-`,
+  header: '*%category*',
+  body: ` %cmd`,
+  footer: '',
+  after: ``,
 }
 let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
   try {
@@ -100,6 +92,7 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
     // Offset -420 is 18.00
     // Offset    0 is  0.00
     // Offset  420 is  7.00
+    let ucpn = `${wish()}`
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, {
@@ -180,15 +173,16 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
       totalexp: exp,
       xp4levelup: max - exp,
       github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
-      level, totalfeatures, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+      level, ucpn, totalfeatures, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //
     
 conn.sendHydrated(m.chat, text.trim(), wm, imgloc.getRandom(), sgc, 'Join here', null, null, [
-[`Owner`, '.owner'],
-[`Status server`, '.stats']
+[`Info bot`, '.speed'],
+[`Sewa bot`, '.sewa'],
+[`Info owner`, '.bioowner']
 ], m, {asLocation: true})
     
                 //
@@ -197,8 +191,8 @@ conn.sendHydrated(m.chat, text.trim(), wm, imgloc.getRandom(), sgc, 'Join here',
     throw e
   }
 }
-handler.help = ['menu2', 'help2']
-handler.tags = ['main']
+handler.help = ['menu']
+handler.tags = ['']
 handler.command = /^(menu|help|\?)$/i
 
 handler.exp = 3
@@ -208,22 +202,26 @@ export default handler
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
-function ucapan() {
-  const time = moment.tz('Asia/Jakarta').format('HH')
-  let res = "Ohayō"
+function wish() {
+    let wishloc = ''
+  const time = moment.tz('Asia/Kolkata').format('HH')
+  wishloc = ('Hi')
+  if (time >= 0) {
+    wishloc = ('Ohayo')
+  }
   if (time >= 4) {
-    res = "Ohayōgozaimasu ⛅"
+    wishloc = ('Ohayōgozaimasu')
   }
-  if (time >= 10) {
-    res = "Kon'nichiwa"
+  if (time >= 12) {
+    wishloc = ('Konnichiwa')
   }
-  if (time >= 15) {
-    res = "Kon'nichiwa"
+  if (time >= 16) {
+    wishloc = ('️Oyasuminasai')
   }
-  if (time >= 18) {
-    res = "Oyasuminasai 🌙"
+  if (time >= 23) {
+    wishloc = ('Oyasuminasai')
   }
-  return res
+  return wishloc
 }
 
 function clockString(ms) {
