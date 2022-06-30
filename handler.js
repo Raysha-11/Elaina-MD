@@ -599,7 +599,7 @@ export async function handler(chatUpdate) {
                 this.msgqueque.splice(quequeIndex, 1)
         }
         //console.log(global.db.data.users[m.sender])
-        await this.sendPresenceUpdtae('composing', m.chat)
+        await this.sendPresenceUpdate('composing',m.chat)
         let user, stats = global.db.data.stats
         if (m) {
             if (m.sender && (user = global.db.data.users[m.sender])) {
