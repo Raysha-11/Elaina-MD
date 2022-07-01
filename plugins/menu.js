@@ -31,6 +31,7 @@ let tags = {
   'host': 'Host',
   'advanced': 'Advanced',
   'info': 'Info',
+  '': 'No Category',
 }
 const defaultMenu = {
   before: `
@@ -49,10 +50,10 @@ _User : %totalreg_
 ✇ Note : _bot ini masi dalam tahap beta, mohon bantuan nya jika ada bug/error harap lapor ke owner_
 %readmore
 `.trimStart(),
-  header: '*%category*',
-  body: ` %cmd`,
+  header: '◇ *%category* ✨',
+  body: `   • _%cmd_`,
   footer: '',
-  after: ``,
+  after: `\nㅈ _*Made by Shinz*_\n_Elaina-md_`,
 }
 let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
   try {
@@ -191,8 +192,8 @@ conn.sendHydrated(m.chat, text.trim(), wm, imgloc.getRandom(), sgc, 'Join here',
     throw e
   }
 }
-handler.help = ['menu']
-handler.tags = ['']
+handler.help = ['menu2', 'help2']
+handler.tags = ['main']
 handler.command = /^(menu|help|\?)$/i
 
 handler.exp = 3
