@@ -83,7 +83,9 @@ global.imagebot = 'https://telegra.ph/file/3f876a993a94f0c6e4ced.jpg'
 global.giflogo = 'https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg'
 global.thumbs = ['https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg', 'https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg', 'https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg','https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg']
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
-global.imgloc = ['https://telegra.ph/file/eb26ae6536032d97baf03.jpg', 'https://telegra.ph/file/2273115cc00b69cb7440f.jpg']
+global.imgloc = ['https://telegra.ph/file/eb26ae6536032d97baf03.jpg', 'https://telegra.ph/file/2273115cc00b69cb7440f.jpg',
+'https://telegra.ph/file/1403ee8b11369fcf86619.jpg', 'https://telegra.ph/file/c7c88ce920acc93ce5596.jpg',
+'https://telegra.ph/file/4a5b50a8b9fabb596bd08.jpg', 'https://telegra.ph/file/d65690fe1ddacf28757ef.jpg']
 /*============== HENTAI ==============*/ 
 //OPTIONS
 global.optsnsfw = true // Untuk mematikan Dan Menyalakan Nsfw
