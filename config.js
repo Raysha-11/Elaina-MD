@@ -1,67 +1,47 @@
-
 import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import moment from 'moment-timezone'
 
-/*============= WAKTU =============*/
-let wibh = moment.tz('Asia/Jakarta').format('HH')
-    let wibm = moment.tz('Asia/Jakarta').format('mm')
-    let wibs = moment.tz('Asia/Jakarta').format('ss')
-    let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
-    
-    let d = new Date(new Date + 3600000)
-    let locale = 'id'
-    // d.getTimeZoneOffset()
-    // Offset -420 is 18.00
-    // Offset    0 is  0.00
-    // Offset  420 is  7.00
-    let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
-    let week = d.toLocaleDateString(locale, { weekday: 'long' })
-    let date = d.toLocaleDateString(locale, {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    })
-      
-    
-/*============== SOCIAL ==============*/
-
-// kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
-global.sig = 'https://www.instagram.com/yt.agungxx'
-global.sgh = 'https://github.com/Neonbotz'
-global.sgc = 'https://chat.whatsapp.com/GUZsmmxDNQAAMyzMKrXDTV'
-global.sdc = 'Wa.me/6287719424487'
-global.snh = 'https://nhentai.net/g/365296/'
-
-/*============== PAYMENT ==============*/
-global.pdana = 'Ndak Punya'
-global.povo = 'Ndak Punya'
-global.pgopay = 'Ndak Punya'
-global.ppulsa = '6287719424487'
-global.ppulsa2 = '628Xxxxxx Lupa'
-global.psaweria = 'Ndak Punya'
-
-/*============== NOMOR ==============*/
-global.nomorbot = '6283181860591'
-global.nomorown = '6283148375193'
-global.namebot = 'Sachi Botzz え'
-global.nameown = '𝔄𝔤𝔲้ีี้𝔫𝔤𝔛้ิืีึุึึึ'
-
-
-/*============== STAFF ==============*/
+//=============『 Utama 』================== //
 global.owner = [
   ['6283181860591'],
   ['6283181860591'],
-  ['6283181860591'],
-  ['6283148375193', '𝔄𝔤𝔲้ีี้𝔫𝔤𝔛้ิืีึุึึึ', true]
-  // [number, dia creator/owner?, dia developer?]
+  ['6283181860591', 'Elaina-md', true],
+  ['6283148375193', 'しんぞう', true]
 ] // Put your number here
 global.mods = [] // Want some help?
-global.prems = [] // Premium user bukan disini nambahinnya, ketik .addprem @user 10
+global.prems = [] // Premium user buka 
 
+//=============『 Info Owner 』============== //
+global.nameown = 'ぞ Shinz'
+global.namabot = 'Elaina-md'
+global.nomorown = '6283148375193'
+global.namebot = '6283181860591'
 
-/*============== API ==============*/
+//=============『 Social 』============== //
+global.sig = 'https://www.instagram.com/shinz_06'
+global.sgh = 'https://github.com/Shinz-06'
+global.sgc = 'https://chat.whatsapp.com/JQt8UkAG4FjATRNRVqoFb2'
+global.sweb = 'Shinz-06.github.io'
+global.snh = 'https://nhentai.net/g/365296/'
+
+//=============『 Payment 』============== //
+global.pdana = '6283148375193'
+global.povo = '6283148375193'
+global.pgopay = '6283148375193'
+global.ppulsa = '6283148375193'
+global.ppulsa2 = '6283181860591'
+
+//=============『 Watermark 』============== //
+global.wm = 'エライナ' //Main Watermark
+global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Elaina-md˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
+global.botdate = `⫹⫺ Date :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}`
+global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}`
+global.titlebot = `ナ Time Sever : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}\nイ Date Server :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}`
+global.author = 'エライナ'
+
+//=============『 Apikey 』============== //
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -96,17 +76,6 @@ global.APIKeys = { // APIKey Here
   'https://hardianto.xyz': 'hardianto',
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
-// Kata APIKEY itu isi dengan apikey lu sendiri, dengan beli ke website itu
-
-/*============== WATERMARK ==============*/
-global.wm = '                「 𝔖𝔞𝔠𝔥𝔦 𝔅𝔬𝔱𝔷𝔷 あ⁩ 」' //Main Watermark
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘𝔖𝔞𝔠𝔥𝔦 𝔅𝔬𝔱𝔷𝔷˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ 𝔖𝔞𝔠𝔥𝔦 𝔅𝔬𝔱𝔷𝔷'
-global.botdate = `⫹⫺ 𝗗𝗮𝘁𝗲: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
-global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${wktuwib}`
-global.titlebot = `⫹⫺ 𝔖𝔞𝔠𝔥𝔦 𝔅𝔬𝔱𝔷𝔷 Whatsapp | By ${global.nameown}`
-global.author = '                「 𝔖𝔞𝔠𝔥𝔦 𝔅𝔬𝔱𝔷𝔷 あ⁩ 」'
-
 
 /*============== LOGO ==============*/
 global.thumb = 'https://telegra.ph/file/3f876a993a94f0c6e4ced.jpg' //Main Thumbnail
