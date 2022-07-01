@@ -36,10 +36,10 @@ global.ppulsa2 = '6283181860591'
 //=============『 Watermark 』============== //
 global.wm = 'エライナ' //Main Watermark
 global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Elaina-md˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.botdate = `⫹⫺ Date :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}`
+global.botdate = `ナ Time Sever : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}\nイ Date Server :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}``
 global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}`
-global.titlebot = `ナ Time Sever : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}\nイ Date Server :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}`
-global.author = 'エライナ'
+global.titlebot = `☘︎ 𝗪𝗵𝗮𝘁𝘀𝗮𝗽𝗽 𝗕𝗼𝘁 𝗠𝘂𝗹𝘁𝗶-𝗗𝗲𝘃𝗶𝗰𝗲| By ${global.nameown}`
+global.author = ''
 
 //=============『 Apikey 』============== //
 global.APIs = { // API Prefix
@@ -77,15 +77,24 @@ global.APIKeys = { // APIKey Here
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
 
-/*============== LOGO ==============*/
+//=============『 Logo 』============== //
 global.thumb = 'https://telegra.ph/file/3f876a993a94f0c6e4ced.jpg' //Main Thumbnail
 global.imagebot = 'https://telegra.ph/file/3f876a993a94f0c6e4ced.jpg'
-global.giflogo = 'https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg'
+global.giflogo = 'https://telegra.ph/file/6048ec3e029520424c234.jpg'
 global.thumbs = ['https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg', 'https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg', 'https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg','https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg']
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 global.imgloc = ['https://telegra.ph/file/eb26ae6536032d97baf03.jpg', 'https://telegra.ph/file/2273115cc00b69cb7440f.jpg',
 'https://telegra.ph/file/1403ee8b11369fcf86619.jpg', 'https://telegra.ph/file/c7c88ce920acc93ce5596.jpg',
-'https://telegra.ph/file/4a5b50a8b9fabb596bd08.jpg', 'https://telegra.ph/file/d65690fe1ddacf28757ef.jpg']
+'https://telegra.ph/file/4a5b50a8b9fabb596bd08.jpg', 'https://telegra.ph/file/d65690fe1ddacf28757ef.jpg', 'https://telegra.ph/file/6aa24b313511019e4a8a2.jpg', 'https://telegra.ph/file/e4b24ae84f611f5997986.jpg',
+'https://telegra.ph/file/e07f4f597c2ac57dcea0f.jpg', ' https://telegra.ph/file/426ae87512d313eceaf1e.jpg', https://telegra.ph/file/a9f9274364383c44646c1.jpg, 'https://telegra.ph/file/0821bd81db0ef6612b153.jpg']
+global.flaaa = [
+ 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
+ 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=',
+ 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=amped-logo&doScale=true&scaleWidth=800&scaleHeight=500&text=',
+ 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=',
+ 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text='
+]
+
 /*============== HENTAI ==============*/ 
 //OPTIONS
 global.optsnsfw = true // Untuk mematikan Dan Menyalakan Nsfw
@@ -104,7 +113,7 @@ global.hbunny = ['https://telegra.ph/file/2b71a8d46d29351479fbc.jpg', 'https://t
 global.hbeach = ['https://telegra.ph/file/14ae0ba2da77d74e6b80c.jpg', 'https://telegra.ph/file/b6905b77e6c7732592a13.jpg','https://telegra.ph/file/9da45a352eb4c40e5d641.jpg', 'https://telegra.ph/file/59e78846ee365975ee6e3.jpg','https://telegra.ph/file/1bf7dee46b83eb4c41d7d.jpg','https://telegra.ph/file/0525a7929f819cb8278f3.jpg']
 
 /*============== TEXT ==============*/
-global.wait = 'Wait A Minute.....'
+global.wait = '_*Wait A Minute.....*_'
 global.eror = '```404 error```'
 
 /*=========== TYPE DOCUMENT ===========*/
@@ -143,8 +152,8 @@ global.lolm = 'Ⓛ'
 global.htjava = '⫹⫺' //hiasan Doang :v
 
 /*============== STICKER WM ==============*/
-global.stickpack = '.'
-global.stickauth = `☂︎\nSa\nc\nh\ni\n-\n𝗕\n𝗢\n𝗧\n✦\n\n⫹⫺ Whatsapp BOT\nwa.me/${global.nomorbot}`
+global.stickpack = 'Shinz-06'
+global.stickauth = `Elaina-md`
 
 global.multiplier = 38 // The higher, The harder levelup
 
