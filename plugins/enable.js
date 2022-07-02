@@ -216,11 +216,13 @@ const listMessage = {
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, listMessage)
       throw false
   }
-  conn.sendButton(m.chat, `*${htki} OPTIONS ${htka}*
-🗂️ *Type:* ${type} 
-📊 *Status:* Succes ✅
-🎚️ *Options:* ${isEnable ? 'Enable' : 'Disable'}
-📣 *For:* ${isAll ? 'This Bot' : isUser ? '' : 'This Chats'}
+  conn.sendButton(m.chat, `*Options ✨*
+_*• Type :*_ _${type}_
+_*• Status :*_ _Sukses_
+_*• Options :*_ _${isEnable ? 'Enable' : 'Disable'}_
+_*• For :*_ _${isAll ? 'This Bot' : isUser ? '' : 'This Chats'}_
+
+_*Successfully*_
 `,wm, null, [[`${isEnable ? '✖️ Disable' : '✔️ Enable'}`, `${isEnable ? `.off ${type}` : `.on ${type}`}`], ['🎀 Menu', '.menu']],m)
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
