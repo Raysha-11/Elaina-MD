@@ -4,32 +4,40 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
     const groupAdmins = participants.filter(p => p.admin)
     const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
     const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
+    let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
     let text = `*「 Group Information 」*\n
 *ID:* 
 ${groupMetadata.id}
+
 *Name:* 
 ${groupMetadata.subject}
-*Description:* 
-${groupMetadata.desc?.toString() || 'unknown'}
+
 *Total Members:*
 ${participants.length} Members
+
 *Group Owner:* 
 @${owner.split('@')[0]}
+
 *Group Admins:*
 ${listAdmin}
+
+*Description:* 
+${groupMetadata.desc?.toString() || 'unknown'}
+
 *Group Settings:*
-${isBanned ? '✅' : '❌'} Banned
-${welcome ? '✅' : '❌'} Welcome
-${detect ? '✅' : '❌'} Detect
-${del ? '❌' : '✅'} Anti Delete
-${antiLink ? '✅' : '❌'} Anti Link
-*Message Settings:*
+${isBanned ? '✅' : 'X'} _Banned_
+${welcome ? '✅' : 'X'} _Welcome_
+${detect ? '✅' : 'X'} _Detect_
+${del ? 'X' : '✅'} _Anti Delete_
+${antiLink ? '✅' : 'X'} _Anti Link_
+
+_*Message Settings:*_
 Welcome: ${sWelcome}
 Bye: ${sBye}
 Promote: ${sPromote}
 Demote: ${sDemote}
 `.trim()
-    conn.sendFile(m.chat, pp, 'pp.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
+    conn.sendButton(m.chat, text, titlebot, pp, [['Menu', '.menu']], m, false, { mentions: [...groupAdmins.map(v => v.id), owner]}, fkon)
 }
 
 handler.help = ['infogrup']
