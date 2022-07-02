@@ -192,9 +192,9 @@ conn.sendHydrated(m.chat, text.trim(), wm, imgloc.getRandom(), sgc, 'Join here',
     throw e
   }
 }
-handler.help = ['menu2', 'help2']
+handler.help = ['menu']
 handler.tags = ['main']
-handler.command = /^(menu|help|\?)$/i
+handler.command = /^menu?$/i
 
 handler.exp = 3
 
