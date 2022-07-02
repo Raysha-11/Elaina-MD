@@ -36,7 +36,7 @@ global.ppulsa2 = '6283181860591'
 //=============『 Watermark 』============== //
 global.wm = 'エライナ' //Main Watermark
 global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Elaina-md˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.botdate = `ナ Time Sever : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}\nイ Date Server :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}``
+global.botdate = `ナ Time Sever : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}\nイ Date Server :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}`
 global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}`
 global.titlebot = `☘︎ 𝗪𝗵𝗮𝘁𝘀𝗮𝗽𝗽 𝗕𝗼𝘁 𝗠𝘂𝗹𝘁𝗶-𝗗𝗲𝘃𝗶𝗰𝗲| By ${global.nameown}`
 global.author = ''
