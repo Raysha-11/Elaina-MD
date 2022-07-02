@@ -1,28 +1,10 @@
 import fetch from 'node-fetch'
 const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = (await import('@adiwajshing/baileys')).default
 let handler = async (m) => {
-    let who
-    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
-    else who = m.sender
-    let user = global.db.data.users[who]
-let anu =`
+    let anu =`
 ${pickRandom(global.bacot)}
 `
-     const message = {
-            document: { url: thumbdoc },
-            jpegThumbnail: await (await fetch(thumbdoc)).buffer(), fileName: 'Quotes-bacot', mimetype: dpdf, fileLength: fsizedoc, pageCount: fpagedoc,
-            caption: anu,
-            footer: wm,
-            templateButtons: [
-                {
-                    quickReplyButton: {
-                        displayText: 'NEXT',
-                        id: '.bacot'
-                    }
-                },
-            ]
-        }
-        conn.sendMessage(m.chat, message, m)
+conn.sendButtonDoc(m.chat, anu, wm, 'Menu', '.menu', m, fakeig)
 }
 handler.help = ['bacot']
 handler.tags = ['quotes']
