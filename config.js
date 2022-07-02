@@ -85,8 +85,7 @@ global.thumbs = ['https://telegra.ph/file/ccbef2bf519796d0d63f5.jpg', 'https://t
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 global.imgloc = ['https://telegra.ph/file/eb26ae6536032d97baf03.jpg', 'https://telegra.ph/file/2273115cc00b69cb7440f.jpg',
 'https://telegra.ph/file/1403ee8b11369fcf86619.jpg', 'https://telegra.ph/file/c7c88ce920acc93ce5596.jpg',
-'https://telegra.ph/file/4a5b50a8b9fabb596bd08.jpg', 'https://telegra.ph/file/d65690fe1ddacf28757ef.jpg', 'https://telegra.ph/file/6aa24b313511019e4a8a2.jpg', 'https://telegra.ph/file/e4b24ae84f611f5997986.jpg',
-'https://telegra.ph/file/e07f4f597c2ac57dcea0f.jpg', ' https://telegra.ph/file/426ae87512d313eceaf1e.jpg', https://telegra.ph/file/a9f9274364383c44646c1.jpg, 'https://telegra.ph/file/0821bd81db0ef6612b153.jpg']
+'https://telegra.ph/file/4a5b50a8b9fabb596bd08.jpg', 'https://telegra.ph/file/d65690fe1ddacf28757ef.jpg', 'https://telegra.ph/file/6aa24b313511019e4a8a2.jpg', 'https://telegra.ph/file/e4b24ae84f611f5997986.jpg', 'https://telegra.ph/file/e07f4f597c2ac57dcea0f.jpg', 'https://telegra.ph/file/426ae87512d313eceaf1e.jpg', 'https://telegra.ph/file/a9f9274364383c44646c1.jpg', 'https://telegra.ph/file/0821bd81db0ef6612b153.jpg']
 global.flaaa = [
  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=',
