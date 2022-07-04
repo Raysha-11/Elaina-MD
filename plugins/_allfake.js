@@ -156,9 +156,9 @@ handler.all = async function (m) {
            },
            "message": {
                "groupInviteMessage": {
-                   "groupJid": "17608914335-1625305606@g.us",
+                   "groupJid": "120363022480840115@g.us",
                    "inviteCode": "null",
-                   "groupName": "Kawan Papah-Chan", 
+                   "groupName": "Elaina-md | By shinz 🍃", 
                    "caption": wm, 
                    'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
                }
