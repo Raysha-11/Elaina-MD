@@ -5,10 +5,12 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     let image = res.getRandom()
     let link = image
     conn.sendHydrated(m.chat,`
-*${htki} GOOGLE IMAGE ${htka}*
+『 *GOOGLE IMAGE* 』
+
 🔎 *Result:* ${text}
 🌎 *Source:* Google
-`, wm, link, link, '🔗 URL', null, null, [['Next', `.image ${text}`],[null,null],[null,null]],m)
+`, 'Cari sendiri 
+kalo ga sesuai sama yang lu cari', link, sgc, 'Join here', null, null, [['Next', `.image ${text}`],[null,null],[null,null]],m)
 }
 handler.help = ['gimage <query>', 'image <query>']
 handler.tags = ['internet', 'tools']
