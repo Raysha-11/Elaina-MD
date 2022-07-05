@@ -66,7 +66,7 @@ let weem = `📮 *Note:* Jika menemukan bug, error atau kesulitan dalam pengguna
 'footer': weem,
 'buttons': [
 {'buttonId': '.allmenu','buttonText': {'displayText': `All Menu`},'type': 1},
-{'buttonId': '.menulist','buttonText': {'displayText': `List Menu`},'type': 1}
+{'buttonId': '.owner','buttonText': {'displayText': `Owner bot`},'type': 1}
 ],
 'headerType': 6}
     await conn.sendMessage(m.chat, buttonMessage, fdoc)
