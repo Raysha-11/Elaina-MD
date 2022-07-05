@@ -661,6 +661,8 @@ export async function participantsUpdate({ id, participants, action }) {
         await loadDatabase()
     let chat = global.db.data.chats[id] || {}
     let text = ''
+
+switch (action) {
  case 'add':
         case 'remove':
             if (chat.welcome) {
