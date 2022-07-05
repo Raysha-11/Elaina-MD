@@ -1,4 +1,4 @@
-import { watchFile, unwatchFile } from 'fs'
+import { watchFile, unwatchFile, fs } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import moment from 'moment-timezone'
@@ -78,7 +78,7 @@ global.APIKeys = { // APIKey Here
 }
 
 //=============『 Logo 』============== //
-global.imgmenu = 'https://telegra.ph/file/c79706eab9f23b53ac870.jpg'
+global.imgmenu = 'fs.readFileSync('./thumb.jpg')
 global.thumb = 'https://telegra.ph/file/3f876a993a94f0c6e4ced.jpg' //Main Thumbnail
 global.imagebot = 'https://telegra.ph/file/3f876a993a94f0c6e4ced.jpg'
 global.giflogo = 'https://telegra.ph/file/6048ec3e029520424c234.jpg'
