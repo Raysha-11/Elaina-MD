@@ -60,7 +60,7 @@ let weem = `📮 *Note:* Jika menemukan bug, error atau kesulitan dalam pengguna
 'previewType': 'pdf',
 'title': '👋 Hai, ' + name ,
 'body': 'Role ' + role + ' bang',
-'thumbnail': await( await fetch(imgmenu)).buffer(),
+'thumbnail': fs.readFileSync("./thumb.jpg"),
 'sourceUrl': sgh}},
 'caption': cap,
 'footer': weem,
