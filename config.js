@@ -78,6 +78,7 @@ global.APIKeys = { // APIKey Here
 }
 
 //=============『 Logo 』============== //
+global.imgmenu = 'https://telegra.ph/file/c79706eab9f23b53ac870.jpg'
 global.thumb = 'https://telegra.ph/file/3f876a993a94f0c6e4ced.jpg' //Main Thumbnail
 global.imagebot = 'https://telegra.ph/file/3f876a993a94f0c6e4ced.jpg'
 global.giflogo = 'https://telegra.ph/file/6048ec3e029520424c234.jpg'
