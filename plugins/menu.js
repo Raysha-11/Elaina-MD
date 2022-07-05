@@ -36,19 +36,13 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-ズ *_%ucpn_*
-
-_I'm Elaina a simple whatsapp bot multi-device made with nodejs_
-_click readmore to see feature_
-
-*About user*
-_Name : %name_
-_Limit : %limit_
-_Level : %level_
-_Role : %role_
-_User : %totalreg_
-
-✇ Note : _bot ini masi dalam tahap beta, mohon bantuan nya jika ada bug/error harap lapor ke owner_
+*${htki} Information ${htka}*
+*🏷️ Nama:* *(${name})*
+*💲 Money:* *RP* ${money}
+*🏆 Level* ${level}
+*🎋 Role:* ${role}
+*🧬 XP:* TOTAL ${exp} (${exp - min} / ${xp}) [${math <= 0 ? `Siap untuk *${usedPrefix}levelup*` : `${math} XP lagi untuk levelup`}]
+*📨 Terdaftar:* ${registered ? 'Ya (' + new Date(regTime).toLocaleString() + ')' : 'Tidak'} ${lastclaim > 0 ? '\n*⏱️Terakhir Klaim:* ' + new Date(lastclaim).toLocaleString() : ''}\n\n Ketik ${usedPrefix}inv untuk melihat Inventory RPG
 %readmore
 `.trimStart(),
   header: '◇ *%category* ✨',
@@ -180,62 +174,38 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //
+let fdoc = {quoted:{key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `${command}`}}}}
+let mim_ = ["application/vnd.openxmlformats-officedocument.presentationml.presentation","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/zip","application/pdf", "text/rtf"]
+let ngelink_ = ["https://www.youtube.com","https://www.instagram.com","http://facebook.com"]
+let weem = `📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner`
+
+  let buttonMessage= {
+'document': {'url': sgh},
+'mimetype': mim_.getRandom(),
+'fileName': 'Silahkan Pilih Menu Dibawah.',
+'fileLength': fsizedoc,
+'pageCount': fpagedoc,
+'contextInfo': {
+'externalAdReply': {
+'showAdAttribution': true,
+'mediaUrl': ngelink_.getRandom(),
+'mediaType': 2,
+'previewType': 'pdf',
+'title': '👋 Hai, ' + name ,
+'body': 'Role ' + role + ' bang',
+'thumbnail': await( await fetch(imgmenu)).buffer(),
+'sourceUrl': sgh}},
+'caption': text.trim(),
+'footer': weem,
+'buttons': [
+{'buttonId': '.allmenu','buttonText': {'displayText': `All Menu`},'type': 1},
+{'buttonId': '.menulist','buttonText': {'displayText': `List Menu`},'type': 1}
+],
+'headerType': 6}
+    await conn.sendMessage(m.chat, buttonMessage, fdoc)
     
-    //------------------ DOCUMENT
-    let d1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-    let d2 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-    let d3  = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-    let d4 = 'application/pdf'
-    let d5 = 'text/rtf'
-    let td = `${pickRandom([d1,d2,d3,d4,d5])}`
-    
-    //------- BUTTON DOC WITH EXTERNAL ADS
-    // MAMPUS DI ENC :v
-    const _0x187932=_0x5c09;function _0x5c09(_0x28b840,_0x244043){const _0x1766bb=_0x1766();return _0x5c09=function(_0x5c09dc,_0x158321){_0x5c09dc=_0x5c09dc-0x1bb;let _0x4031df=_0x1766bb[_0x5c09dc];return _0x4031df;},_0x5c09(_0x28b840,_0x244043);}(function(_0x1c9e83,_0x2eef01){const _0x5e85ab=_0x5c09,_0x179660=_0x1c9e83();while(!![]){try{const _0x4c7814=-parseInt(_0x5e85ab(0x1d0))/0x1*(-parseInt(_0x5e85ab(0x1bd))/0x2)+parseInt(_0x5e85ab(0x1c4))/0x3*(parseInt(_0x5e85ab(0x1bf))/0x4)+parseInt(_0x5e85ab(0x1cc))/0x5*(-parseInt(_0x5e85ab(0x1d1))/0x6)+parseInt(_0x5e85ab(0x1c1))/0x7*(parseInt(_0x5e85ab(0x1bc))/0x8)+parseInt(_0x5e85ab(0x1cd))/0x9*(-parseInt(_0x5e85ab(0x1c7))/0xa)+parseInt(_0x5e85ab(0x1cb))/0xb*(-parseInt(_0x5e85ab(0x1be))/0xc)+parseInt(_0x5e85ab(0x1ce))/0xd;if(_0x4c7814===_0x2eef01)break;else _0x179660['push'](_0x179660['shift']());}catch(_0x2b3360){_0x179660['push'](_0x179660['shift']());}}}(_0x1766,0x70ad5));let buttonMessage={'document':{'url':sgc},'mimetype':td,'fileName':global['wm'],'fileLength':fsizedoc,'pageCount':fpagedoc,'contextInfo':{'forwardingScore':0x22b,'isForwarded':!![],'externalAdReply':{'mediaUrl':global[_0x187932(0x1c8)],'mediaType':0x2,'previewType':_0x187932(0x1c9),'title':global['titlebot'],'body':global['titlebot'],'thumbnail':await(await fetch(thumb))[_0x187932(0x1ca)](),'sourceUrl':sgc}},'caption':text,'footer':botdate,'buttons':[{'buttonId':'.owner','buttonText':{'displayText':_0x187932(0x1bb)},'type':0x1},{'buttonId':_0x187932(0x1c5),'buttonText':{'displayText':_0x187932(0x1c0)},'type':0x1},{'buttonId':_0x187932(0x1c6),'buttonText':{'displayText':'Donasi'},'type':0x1}],'headerType':0x6};await conn[_0x187932(0x1c2)](m[_0x187932(0x1cf)],buttonMessage,{'quoted':m,'mentionedJid':[m[_0x187932(0x1c3)]]});function _0x1766(){const _0x1c60e8=['3ezQcUH','.ping','.donasi','725770ccnUBU','sig','pdf','buffer','305624SHQwwY','233195fjGJSZ','72BjUaMS','2869867kBKaey','chat','6NokiEm','72PsFaxu','Owner','1832yREmVQ','205026IsvCrH','132IBvmfp','3329164htczQJ','Speed','7315FCLnNH','sendMessage','sender'];_0x1766=function(){return _0x1c60e8;};return _0x1766();}
-    
-//-------DOC TEMPLATE
-    const message = {
-            document: { url: thumbdoc },
-            jpegThumbnail: await (await fetch(thumbdoc)).buffer(),
-            fileName: bottime,
-            mimetype: td,
-            fileLength: fsizedoc,
-            pageCount: fpagedoc,
-            caption: text,
-            footer: wm,
-            templateButtons: [
-                {
-                    urlButton: {
-                        displayText: `${namebot}`,
-                        url: 'https://Shinz-06.github.io'
-                    }
-                },
-                {
-                    urlButton: {
-                        displayText: 'Group Official',
-                        url: sgc
-                    }
-                },
-                {
-                    quickReplyButton: {
-                        displayText: 'Owner',
-                        id: '.owner'
-                    }
-                },
-                {
-                    quickReplyButton: {
-                        displayText: 'Speed',
-                        id: '.ping'
-                    }
-                },
-                {
-                    quickReplyButton: {
-                        displayText: 'Donasi',
-                        id: '.donasi'
-                    }
-                },
-            ]
-        }
+}
+      
     
                 //
   } catch (e) {
