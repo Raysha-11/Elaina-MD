@@ -660,25 +660,64 @@ export async function participantsUpdate({ id, participants, action }) {
         await loadDatabase()
     let chat = global.db.data.chats[id] || {}
     let text = ''
-    switch (action) {
-        case 'add':
+ case 'add':
         case 'remove':
             if (chat.welcome) {
                 let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                 for (let user of participants) {
-                    let pp = './src/avatar_contact.png'
+                    let pp = await this.profilePictureUrl(user).catch(_ => './src/avatar_contact.png')
+                  //How fo fix
                     try {
-                        pp = await this.profilePictureUrl(user, 'image')
                     } catch (e) {
                     } finally {
-                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'unknow') :
-                            (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', await this.getName(user))
-                        //this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: [user] })
-    this.sendHydrated(id, text, wm + '\n\n' + botdate, pp, sgc, (action == 'add' ? '💌 WELCOME' : '🐾 BYE'), user.split`@`[0], '🌹 USER', [
-      ['MENU 🎀', '/menu'],
-      ['\n\nSAYA PEDO DAN SAYA BANGGA (≧▽≦)', '...'],
-      [null, null]
+                      //  text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Selamat datang bruh.. 👋').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'unknow') :
+                       //     (chat.sBye || this.bye || conn.bye || 'Dahhh bruh... 👋')).replace('@user', '@' + user.split('@')[0])
+                       text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || '👋 Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'unknow') :
+                            (chat.sBye || this.bye || conn.bye || '👋 Bye, @user!')).replace('@user', await this.getName(user))
+                       
+  let lea = await new Canvas.Goodbye()
+  .setUsername(`${await conn.getName(user)}`)
+  .setDiscriminator(`337631`)
+  .setMemberCount(`${groupMetadata.participants.length}`)
+  .setGuildName(`${groupMetadata.subject}`)
+  .setAvatar(`${pp}`)
+  .setColor("border", "#000000")
+  .setColor("username-box", "#000000")
+  .setColor("discriminator-box", "#000000")
+  .setColor("message-box", "#000000")
+  .setColor("title", "#ffffff")
+  .setColor("avatar", "#000000")
+  .setBackground("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaBCkFVUY0nJxj1DPqtvAwrf7qfvj6e-Rv-A&usqp=CAU")
+  .toAttachment();
+  var buffo = await lea.toBuffer()
+
+ let wel = await new Canvas.Welcome()
+  .setUsername(`${await conn.getName(user)}`)
+  .setDiscriminator(`445577`)
+  .setMemberCount(`${groupMetadata.participants.length}`)
+  .setGuildName(`${groupMetadata.subject}`)
+  .setAvatar(`${pp}`)
+  .setColor("border", "#000000")
+  .setColor("username-box", "#000000")
+  .setColor("discriminator-box", "#000000")
+  .setColor("message-box", "#000000")
+  .setColor("title", "#ffffff")
+  .setColor("avatar", "#000000")
+  .setBackground("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF7c3n7snGnpzS676fXaU2yxSjGsFNrCURXw&usqp=CAU")
+  .toAttachment();
+  var buffa = await wel.toBuffer()
+  
+  
+  let gettext = await fetch(`https://raw.githubusercontent.com/fawwaz37/random/main/bijak.txt`)
+  let restext = await gettext.text()
+  let katarandom = restext.split('\n')
+  
+  this.sendHydrated(id, text, wm + '\n\n' + botdate, action === 'add' ? wel.toBuffer() : lea.toBuffer(), gcwangsaf, (action == 'add' ? 'Hinata Group' : 'Nitip Gorengan'), user.split`@`[0], 'Telpon', [
+      ['Menu', '/menu'],
+      ['Test', '/ping'],
+      ['Ok !\n\n' + katarandom.getRandom() + '\n\n', '...']
     ], null, false, { mentions: [user] })
+                      //  this.sendButton(id, text, author, action === 'add' ? wel.toBuffer() : lea.toBuffer(), [["Menu", ".menu"],["Owner", ".owner"]], null, false, { mentions: [user] })
                     }
                 }
             }
