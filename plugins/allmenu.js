@@ -183,7 +183,7 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //
     
-    conn.sendHydrated(m.chat, text.trim(), wm, imgmenu.getRandom(), sgc, 'Official Group', who.split`@`[0], 'Your Number', [
+    conn.sendHydrated(m.chat, text.trim(), wm, imgloc.getRandom(), sgc, 'Official Group', who.split`@`[0], 'Your Number', [
       ['Menu', '/menu'],
       ['Owner', '/owner'],
       ['Test speed', '/info']
