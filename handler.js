@@ -5,6 +5,7 @@ import path, { join } from 'path'
 import { unwatchFile, watchFile } from 'fs'
 import chalk from 'chalk'
 import fs from 'fs'
+import Canvas from "discord-canvas"
 
 /**
  * @type {import('@adiwajshing/baileys')}
@@ -712,7 +713,7 @@ export async function participantsUpdate({ id, participants, action }) {
   let restext = await gettext.text()
   let katarandom = restext.split('\n')
   
-  this.sendHydrated(id, text, wm + '\n\n' + botdate, action === 'add' ? wel.toBuffer() : lea.toBuffer(), gcwangsaf, (action == 'add' ? 'Hinata Group' : 'Nitip Gorengan'), user.split`@`[0], 'Telpon', [
+  this.sendHydrated(id, text, wm + '\n\n' + botdate, action === 'add' ? wel.toBuffer() : lea.toBuffer(), sgc, (action == 'add' ? 'Official Group' : 'Nitip Gorengan'), user.split`@`[0], 'Telpon', [
       ['Menu', '/menu'],
       ['Test', '/ping'],
       ['Ok !\n\n' + katarandom.getRandom() + '\n\n', '...']
