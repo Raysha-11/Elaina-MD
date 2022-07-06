@@ -9,5 +9,6 @@ handler.command = /^(chitoge)$/i
 handler.tags = ['anime']
 handler.help = ['chitoge']
 handler.premium = false
+handler.private = true 
 
 export default handler
