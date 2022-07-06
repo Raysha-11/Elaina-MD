@@ -9,5 +9,6 @@ handler.command = /^(elaina)$/i
 handler.tags = ['anime']
 handler.help = ['elaina']
 handler.premium = false
+handler.private = true 
 
 export default handler
