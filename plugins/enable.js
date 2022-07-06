@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 	{title: "Antidelete", rowId: `${usedPrefix + command} antidelete`},
 	{title: "Autolevelup", rowId: `${usedPrefix + command} autolevelup`},
 	{title: "Detect", rowId: `${usedPrefix + command} detect`},
-	{title: "👤 | WhiteListMyContact", rowId: `${usedPrefix + command} whitelistmycontact`},
+	{title: "AntiVirtex", rowId: `${usedPrefix + command} antivirtex`},
 	{title: "Autoread", rowId: `${usedPrefix + command} autoread`},
 	{title: "PcOnly", rowId: `${usedPrefix + command} pconly`},
 	{title: "GcOnly", rowId: `${usedPrefix + command} gconly`},
@@ -58,6 +58,15 @@ const listMessage = {
        }
        chat.detect = isEnable
        break
+    case 'antivirtex':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn)
+          throw false
+        }
+      }
+      chat.antiVirtex = isEnable
+      break
     case 'antidelete':
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
