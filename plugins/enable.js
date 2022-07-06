@@ -9,6 +9,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 	{title: "Simi", rowId: `${usedPrefix + command} simi`},
 	{title: "Antilink", rowId: `${usedPrefix + command} antilink`},
 	{title: "Antidelete", rowId: `${usedPrefix + command} antidelete`},
+        {title: "AutoSticker", rowId: `${usedPrefix + command} autosticker`},
 	{title: "Autolevelup", rowId: `${usedPrefix + command} autolevelup`},
 	{title: "Detect", rowId: `${usedPrefix + command} detect`},
 	{title: "AntiVirtex", rowId: `${usedPrefix + command} antivirtex`},
@@ -125,14 +126,12 @@ const listMessage = {
       }
       global.opts['pconly'] = isEnable
       break
-    case 'stiker':
-      if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn)
+    case 'autosticker':
+        if (!isROwner) {
+          global.dfail('rowner', m, conn)
           throw false
         }
-      }
-      chat.stiker = isEnable
+      chat.autoSticker = isEnable
       break
     case 'gconly':
     case 'grouponly':
