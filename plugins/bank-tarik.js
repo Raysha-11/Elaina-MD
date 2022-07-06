@@ -3,7 +3,7 @@ import fs from 'fs'
 
 let handler = async (m, { conn, command, args }) => {
   let user = global.db.data.users[m.sender]
-  let frep = { contextInfo: { externalAdReply: {title: global.wm, body: global.author, sourceUrl: snh, thumbnail: fs.readFileSync('./thumb.jpg')}}}
+  let frep = { contextInfo: { externalAdReply: {title: global.wm, body: global.author, sourceUrl: sgh, thumbnail: fs.readFileSync('./thumb.jpg')}}}
   let count = command.replace(/^tarik/i, '')
   count = count ? /all/i.test(count) ? Math.floor(global.db.data.users[m.sender].bank / xpperlimit) : parseInt(count) : args[0] ? parseInt(args[0]) : 1
   count = Math.max(1, count)
