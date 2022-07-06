@@ -3,42 +3,7 @@ import { join } from 'path'
 import { xpRange } from '../lib/levelling.js'
 
 
-let tags = {
-  'main': 'Main',
-  'rpg': 'RolePlay Games',
-  'xp': 'Exp & Limit',
-  'jadian': 'Jadian',
-  'sticker': 'Sticker',
-  'edukasi': 'Edukasi',
-  'quran': 'Al Quran',
-  'tools': 'Tools',
-  'kerang': 'Kerang Ajaib',
-  'primbon': 'Primbon',
-  'fun': 'Fun',
-  'game': 'Game',
-  'quotes': 'Quotes',
-  'audio': 'Audio',
-  'maker': 'Maker',
-  'downloader': 'Downloader',
-  'internet': 'Internet',
-  'random': 'Random',
-  'nsfw': 'Nsfw',
-  'nulis': 'MagerNulis & Logo',
-  'anonymous': 'Anonymous Chat',
-  'database': 'Database',
-  'admin': 'Admin',
-  'group': 'Group',
-  'vote': 'Voting',
-  'absen': 'Absen',
-  'premium': 'Premium',
-  'advanced': 'Advanced',
-  'info': 'Info',
-  'owner': 'Owner',
-  'jadibot': 'Jadi Bot',
-  'host': 'Host',
-  'Baileys': 'Baileys',
-  '': 'No Category',
-}
+let tags = {}
 let emot = `${pickRandom(['⎔', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '▢', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
 const defaultMenu = {
   before: `
@@ -57,6 +22,7 @@ _Waktu server : %time_
 _Runtime : %uptime (%muptime)_
 _*Total fitur :* %totalfeatures_
 _*Pengguna :* %totalreg Orang_
+
 %readmore
 `.trimStart(),
   header: '_*%category*_ ✨',
