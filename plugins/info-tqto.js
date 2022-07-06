@@ -51,16 +51,7 @@ https://github.com/Ameliascrf
 *❉ Fokus ID:*
 https://github.com/Fokusdotid
 `
-conn.reply(m.chat, tqto, m, { contextInfo: { externalAdReply: {
-            title: `${htjava} ${namebot}`,
-            body: titlebot,
-            description: titlebot,
-            mediaType: 2,
-          thumbnail: await(await fetch(thumb2)).buffer(),
-         mediaUrl: sgh
-        }
-     }
-    })
+conn.reply(m.chat, tqto, m, fakeig)
 }
 handler.help = ['tqto']
 handler.tags = ['main','info']
