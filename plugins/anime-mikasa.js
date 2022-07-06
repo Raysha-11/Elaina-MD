@@ -9,5 +9,6 @@ handler.command = /^(mikasa)$/i
 handler.tags = ['anime']
 handler.help = ['mikasa']
 handler.premium = false
+handler.private = true
 
 export default handler
