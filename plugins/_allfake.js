@@ -54,12 +54,12 @@ handler.all = async function (m) {
 		}
 		global.fakeig = {
          contextInfo: { externalAdReply: { showAdAttribution: true,
-            mediaUrl: "https://Instagram.com/shinz_06",
-            mediaType: "IMAGE",
+            mediaUrl: "http://facebook.com",
+            mediaType: "PHOTO",
             description: "https://Instagram.com/shinz_06", 
             title: 'Elaina-md | By shinz 🍃',
             body: wm,
-            thumbnailUrl: pp,
+            thumbnail: fs.readFileSync("./thumb.jpg"),
             sourceUrl: sgc
     }
     } }
