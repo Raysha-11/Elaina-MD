@@ -597,8 +597,7 @@ export async function handler(chatUpdate) {
                             console.error(e)
                         }
                     }
-               
-                }
+                                 }
                 break
             }
         }
