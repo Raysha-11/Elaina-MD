@@ -9,5 +9,6 @@ handler.command = /^(kotori)$/i
 handler.tags = ['anime']
 handler.help = ['kotori']
 handler.premium = false
+handler.private = true 
 
 export default handler
