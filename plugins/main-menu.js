@@ -188,7 +188,7 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //
     
-conn.sendButtonDoc(m.chat, text.trim(), wm, 'Dashboard', '.dashboard', 'Infobot', '.ping', m,fakeig)
+conn.send2ButtonDoc(m.chat, text.trim(), wm, 'Dashboard', '.dashboard', 'Infobot', '.ping', m,fakeig)
     
     /*
     try {
