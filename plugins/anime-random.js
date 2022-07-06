@@ -7,10 +7,6 @@ let frep = { contextInfo: { externalAdReply: {title: global.wm, body: global.wm,
 let fdoc = {quoted:{key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `${command}`}}}}
 let imgr = flaaa.getRandom()
 
-// Wallpaper
-if (command == 'aesthetic') {
-let haha = await conn.getFile(`https://sekha.me/api/wallpaper/aesthetic?apikey=apirey`)
-await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
 if (command == 'akira') {
 let haha = await conn.getFile(`https://sekha.me/api/wallpaper/akira?apikey=apirey`)
 await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
@@ -23,9 +19,6 @@ await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [
 if (command == 'anime') {
 let haha = await conn.getFile(`https://sekha.me/api/wallpaper/anime?apikey=apirey`)
 await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
-if (command == 'anjing') {
-let haha = await conn.getFile(`https://sekha.me/api/wallpaper/anjing?apikey=apirey`)
-await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
 if (command == 'asuna') {
 let haha = await conn.getFile(`https://sekha.me/api/wallpaper/asuna?apikey=apirey`)
 await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
@@ -34,21 +27,6 @@ let haha = await conn.getFile(`https://sekha.me/api/wallpaper/ayuzawa?apikey=api
 await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
 if (command == 'boruto') {
 let haha = await conn.getFile(`https://sekha.me/api/wallpaper/boruto?apikey=apirey`)
-await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
-if (command == 'cecan') {
-let haha = await conn.getFile(`https://sekha.me/api/wallpaper/cecan?apikey=apirey`)
-await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
-if (command == 'cecan2') {
-let haha = await conn.getFile(`https://sekha.me/api/wallpaper/cecan2?apikey=apirey`)
-await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
-if (command == 'cecan3') {
-let haha = await conn.getFile(`https://sekha.me/api/wallpaper/cecan3?apikey=apirey`)
-await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
-if (command == 'cecan4') {
-let haha = await conn.getFile(`https://sekha.me/api/wallpaper/cecan4?apikey=apirey`)
-await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
-if (command == 'cecan5') {
-let haha = await conn.getFile(`https://sekha.me/api/wallpaper/cecan5?apikey=apirey`)
 await conn.sendButton(m.chat, `Nihh Anime *${command}*`.trim(), wm, haha.data, [['🔄 Next 🔄', `/${command}`]], m, fdoc)}
 if (command == 'chiho') {
 let haha = await conn.getFile(`https://sekha.me/api/wallpaper/chiho?apikey=apirey`)
