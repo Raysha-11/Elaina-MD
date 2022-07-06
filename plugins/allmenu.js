@@ -42,16 +42,21 @@ let tags = {
 let emot = `${pickRandom(['⎔', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '▢', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
 const defaultMenu = {
   before: `
-Hai, *%name!*
+*Hai,* _*%name!*_
 
-*Tanggal:* %week, %date
-*Waktu:* %time
-*Bot Online:* %uptime (%muptime)
-*Pengguna:* %totalreg Orang
-*Lib:* Baileys-Md
-*Language:* Javascript,Ts-Node
-*Fitur:* %totalfeatures command
+*✨ Information*
+*Nama :* _%name_
+*Money :* _%money_
+*Level :* _%level_
+*Role :* _%role_
+*Xp :* _TOTAL %exp (%exp / %maxexp)_
 
+*About*
+_Tanggal : %week, %date_
+_Waktu server : %time_
+_Runtime : %uptime (%muptime)_
+_*Total fitur :* %totalfeatures_
+_*Pengguna :* %totalreg Orang_
 %readmore
 `.trimStart(),
   header: '_*%category*_ ✨',
@@ -177,17 +182,13 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
       totalexp: exp,
       xp4levelup: max - exp,
       github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
-      level, totalfeatures, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+      level, totalfeatures, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role, money,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //
     
-    conn.sendHydrated(m.chat, text.trim(), wm, imgloc.getRandom(), sgc, 'Official Group', who.split`@`[0], 'Your Number', [
-      ['Menu', '/menu'],
-      ['Owner', '/owner'],
-      ['Test speed', '/info']
-    ], m, {asLocation:true})
+conn.sendButtonDoc(m.chat, text.trim(), wm, 'Owner', '.owner', m,fakeig)
     
     /*
     try {
@@ -206,11 +207,8 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
   .setBackground("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF7c3n7snGnpzS676fXaU2yxSjGsFNrCURXw&usqp=CAU")
   .toAttachment();
 
-  conn.sendHydrated2(m.chat, text.trim(), wm, wel.toBuffer(), webs, 'Website', gcwangsaf, 'Group WhatsApp', [
-      ['Donate', '/donasi'],
-      ['Owner', '/owner'],
-      ['Test', '/ping']
-    ], m)
+
+
     } catch {
     let wel = await new Canvas.Welcome()
   .setUsername(`${name}`)
@@ -241,7 +239,7 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
   }
 }
 
-handler.command = /^allmenu$/i
+handler.command = /^menu$/i
 
 handler.exp = 3
 
