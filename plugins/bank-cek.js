@@ -11,7 +11,7 @@ let handler = async (m, { conn }) => {
 │ 📑 *Registered:* ${user.registered ? 'Yes':'No'}
 └──···
 `.trim()
-  conn.sendButton(m.chat, caption, global.wm, bank, [`Inventory`, '.inv'],m, fakeig)
+  conn.sendButton(m.chat, caption, global.wm, bank, [`Inventory`, '.inv'],m)
 }
 handler.help = ['bank']
 handler.tags = ['rpg']
