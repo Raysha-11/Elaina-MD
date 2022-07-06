@@ -7,8 +7,8 @@ ${conn.getName(m.sender)} is now AFK${text ? ': ' + text : ''}
 _*Jangan di ganggu yaa*_
 `,wm,'Oke','ok',m,fakeig)
 }
-handler.help = ['afk [alasan]']
-handler.tags = ['main']
+handler.help = ['afk <alasan>']
+handler.tags = ['ᴍᴀɪɴ']
 handler.command = /^afk$/i
 
 export default handler
