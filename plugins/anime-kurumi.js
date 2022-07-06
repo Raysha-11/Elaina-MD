@@ -9,5 +9,6 @@ handler.command = /^(kurumi)$/i
 handler.tags = ['anime']
 handler.help = ['kurumi']
 handler.premium = false
+handler.private = true
 
 export default handler
