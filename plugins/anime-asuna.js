@@ -9,5 +9,6 @@ handler.command = /^(asuna)$/i
 handler.tags = ['anime']
 handler.help = ['asuna']
 handler.premium = false
+handler.private = true 
 
 export default handler
