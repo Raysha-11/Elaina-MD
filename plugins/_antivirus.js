@@ -1,13 +1,12 @@
 const isVirtex = /PLHIPS|๒|๑|ৡ|⃟|Đ.Δ.Μ/i // tambahin sendiri
 
-export async function before(m, { isBlocked }, { conn, isAdmin, isBotAdmin }) {
+export async function before(m, { conn, isAdmin, isBotAdmin }) {
     if (m.isBaileys && m.fromMe)
         return !0
     if (!m.isGroup) return !1
     let chat = global.db.data.chats[m.chat]
     let bot = global.db.data.settings[this.user.jid] || {}
     const isAntiVirtex = isVirtex.exec(m.text)
-    if (isBlocked) return
 
     if (chat.antiVirtex && isAntiVirtex) {
     
