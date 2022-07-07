@@ -1,25 +1,20 @@
-# Elaina md
+# Shiren MD
 <p align="center">
-<img src="https://telegra.ph/file/1d15cf6b26c06b65bb6ac.jpg" alt="Shiren MD" width="250"/>
+<img src="https://telegra.ph/file/a6fa6e7d9f8b8ab7ee501.jpg" alt="Shiren MD" width="250"/>
 
 
 </p>
 <p align="center">
-<a href="#"><img title="Elaina MD" src="https://img.shields.io/badge/Elaina-MD-red?colorA=%255ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="Shiren MD" src="https://img.shields.io/badge/Recode by-Shinz-red?colorA=%255ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 </p>
 <p align="center">
-<a href="https://github.com/shin-08/Shirenn-md"><img title="Followers" src="https://img.shields.io/github/followers/Paquito1923?color=blue&style=flat-square"></a>
-<a href="https://github.com/shin-08/Shirenn-md"><img title="Stars" src="https://img.shields.io/github/stars/Paquito1923/elyasmd?color=red&style=flat-square"></a>
-<a href="https://github.com/shin-08/Shirenn-md/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Paquito1923/elyasmd?color=red&style=flat-square"></a>
-<a href="https://github.com/shin-08/Shirenn-mdwatchers"><img title="Watching" src="https://img.shields.io/github/watchers/Paquito1923/elyasmd?label=Watchers&color=blue&style=flat-square"></a>
-</p>
 
 ---
 
 ## Information
-> Aina whatsapp using a Baileys library.
+> Shiren whatsapp using a Baileys library.
 > Jika kamu menemukan semacam bug, harap untuk dimaklumi sementara
 >
 > Script ini gratis, Jika ketahuan di jual, Script ini akan langsung di hapus.
