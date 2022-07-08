@@ -1,7 +1,8 @@
-import { promises } from 'fs'
-import { join } from 'path'
-import { xpRange } from '../lib/levelling.js'
-
+let { promises } = require('fs')
+let { join } = require('path')
+let { xpRange } = require('../lib/levelling.js')
+let fs = require('fs')
+let path = require('path')
 
 let tags = {}
 let emot = `${pickRandom(['⎔', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '▢', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
@@ -32,7 +33,7 @@ _*Pengguna :* %totalreg Orang_
 }
 let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
   try {
-    let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
+    let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
     let { exp, limit, level, role, money, lastclaim, lastweekly, registered, regTime, age, banned, pasangan } = global.db.data.users[who]
     let { min, xp, max } = xpRange(level, global.multiplier)
@@ -154,7 +155,7 @@ let handler = async (m, { conn, groupMetadata, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //
     
-conn.send2ButtonDoc(m.chat, text.trim(), wm, 'Dashboard', '.dashboard', 'Infobot', '.info', m,fakeig)
+conn.sendButtonDoc(m.chat, text.trim(), wm, 'Dashboard', '.dashboard', 'Infobot', '.info', m,fakeig)
     
     /*
     try {
@@ -209,7 +210,7 @@ handler.command = /^menu$/i
 
 handler.exp = 3
 
-export default handler
+module.exports = handler
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
